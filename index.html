@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        legend{
+            background-color: black;
+            color: white;
+        }
+        
+        #monster{
+            width: 226px;
+        }
+
+        #Temperature50::-webkit-meter-optimum-value {
+  background: blue;
+}
+
+#Temperature70::-webkit-meter-optimum-value {
+  background: green;
+}
+
+#Temperature90::-webkit-meter-optimum-value {
+  background: red;
+}
+        
+
+    </style>
+
+
+</head>
+<body>
+    
+    <label for="browser">Choose a flavor:</label>
+    <input list="browsers" name="broswer" id="browser">
+
+    <datalist id="browsers">
+        <option value="Chovolate"></option>
+        <option value="Coconut"></option>
+        <option value="Mint"></option>
+        <option value="Strawberry"></option>
+        <option value="Vanilla"></option>
+    </datalist>
+    <br><br><br>
+
+
+   <form> 
+    <label for="flavor">Choose a flavor:</label>
+    <select name="favors" id="flavors">
+        <option value="chocoloate">chocolate</option>
+        <option value="coconut">Coconut</option>
+        <option value="mint">Mint</option>
+        <option value="strawberry"> Strawberry</option>
+        <option value="vanilla">Vanilla</option>
+    </select>
+   </form>
+
+   <br><br>
+
+   <form id="monster">
+    <fieldset>
+       <legend>Choose your favorite monster</legend> <br> 
+       <input type="radio" value="Kraken">Kraken <br>
+       <input type="radio" value="Sasquatch">Sasquatch <br>
+       <input type="radio" value="Mothman">Mothman
+
+    </fieldset>
+   </form>
+<br><br>
+   <p>What are fieldsets for? fieldsets are used for to group related elements in a form or draws a box around the related elements.</p>
+<br><br>
+   <p>What I could add to this form to separate the two groups are adding a legend elements.</p>
+
+   <br><br>
+
+   <p>No you cannot change the input values if they are inside a disabled fieldset</p>
+
+
+   <label for="Temperature50">Temperature: </label>
+   <meter id="Temperature50" value="50" min="0" max="120">50 out of 120</meter><br>
+
+   <label for="Temperature75">Temperature:</label>
+   <meter id="Temperature70" value="70" min="0" max="120">70 out of 120</meter> <br>
+
+   <label for="Temperature90">Temperature:</label>
+   <meter id="Temperature90" value="90" min="0" max="120">90 out of 120</meter>
+
+
+
+<p> the 6 main attributes of metter tag are high, low, max, min, optimum, value.</p>
+
+<form id="add" oninput="x.value=parseInt(one.value)+parseInt(second.value)">
+    <input type="range" id="one" name="one">+<input type="input" id="second" value="25" name="second">
+   
+  </form>
+
+  <output form="add" id="x" name="x" for="one+second"></output>
+
+  <br><br>
+
+  <form id="mult" oninput="y.value=parseInt(third.value)*parseInt(fourth.value)">
+  <input type="input" id="third" name="third">*<input type="input" id="fourth" name="fourth">
+
+</form>
+
+<output form="mult" id="y" name="y" for="third*fourth"></output>
+
+
+</body>
+</html>
